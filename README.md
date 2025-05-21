@@ -18,7 +18,7 @@ This is a Streamlit-based admin dashboard for hotel reservation management.
    ```
 2. Run the app:
    ```bash
-   streamlit run src/app.py
+   streamlit run src/home.py
    ```
 
 ## Features

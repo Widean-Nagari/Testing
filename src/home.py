@@ -1,4 +1,4 @@
-# src/app.py
+# src/home.py
 import streamlit as st
 import numpy as np
 import time
@@ -15,35 +15,36 @@ def get_UN_data():
     st.button("Rerun")
 
 def area_chart():
-    try:
-        df = get_UN_data()
-        countries = st.multiselect(
-            "Choose countries", list(df.index), ["China", "United States of America"]
-        )
-        if not countries:
-            st.error("Please select at least one country.")
-        else:
-            data = df.loc[countries]
-            data /= 1000000.0
-            st.subheader("Gross agricultural production ($B)")
-            st.dataframe(data.sort_index())
+    a=1
+    # try:
+    #     df = get_UN_data()
+    #     countries = st.multiselect(
+    #         "Choose countries", list(df.index), ["China", "United States of America"]
+    #     )
+    #     if not countries:
+    #         st.error("Please select at least one country.")
+    #     else:
+    #         data = df.loc[countries]
+    #         data /= 1000000.0
+    #         st.subheader("Gross agricultural production ($B)")
+    #         st.dataframe(data.sort_index())
 
-            data = data.T.reset_index()
-            data = pd.melt(data, id_vars=["index"]).rename(
-                columns={"index": "year", "value": "Gross Agricultural Product ($B)"}
-            )
-            chart = (
-                alt.Chart(data)
-                .mark_area(opacity=0.3)
-                .encode(
-                    x="year:T",
-                    y=alt.Y("Gross Agricultural Product ($B):Q", stack=None),
-                    color="Region:N",
-                )
-            )
-            st.altair_chart(chart, use_container_width=True)
-    except URLError as e:
-        st.error(f"This demo requires internet access. Connection error: {e.reason}")
+    #         data = data.T.reset_index()
+    #         data = pd.melt(data, id_vars=["index"]).rename(
+    #             columns={"index": "year", "value": "Gross Agricultural Product ($B)"}
+    #         )
+    #         chart = (
+    #             alt.Chart(data)
+    #             .mark_area(opacity=0.3)
+    #             .encode(
+    #                 x="year:T",
+    #                 y=alt.Y("Gross Agricultural Product ($B):Q", stack=None),
+    #                 color="Region:N",
+    #             )
+    #         )
+    #         st.altair_chart(chart, use_container_width=True)
+    # except URLError as e:
+    #     st.error(f"This demo requires internet access. Connection error: {e.reason}")
 
 def line_chart():
     progress_bar = st.sidebar.progress(0)
@@ -75,7 +76,7 @@ def other_chart():
 
 def main():
     st.set_page_config(page_title="Hotel Reservation Admin Dashboard", layout="wide")
-    st.title("Hotel Reservation")
+    st.title("Hotel Reservation Admin Dashboard")
 
     area_chart()
     line_chart()
