@@ -1,0 +1,50 @@
+Design a room plan page for a hotel management system with the following features and layout:
+1. Page Structure:
+   - The page should be divided into three main sections:
+     - Room List
+     - Unassigned Guest List
+     - Legend
+   - Each section should be collapsible (Accordion) and vertically resizable.
+
+2. Room List:
+   - At the top of the page, include a date picker that allows users to select a starting date. The calendar sections will display data for the next 7 days from the selected date.
+   - have 1 table that contains room information and calendar for each row
+   - room information:
+     - Display key details for each room: 
+       - Room Number
+       - Room Type
+       - (On Hover) Show additional Room Status Details, including:
+         - Room Number
+         - Room Type & Description
+         - Floor
+         - Exposure
+         - Room Attributes
+         - Smoking (yes/no)
+         - Clean (yes/no)
+   - calendar have:
+     - Include a Room Reservation Gantt Chart that visualizes reservations.
+     - Implement an Item Card system where each item card can occupy one or more cells in the Gantt Chart.
+       - Each Item Card should display the guest name.
+       - On Hover: Show Reservation Details card including:
+         - Room Number + Guest Name
+         - Confirmation Number
+         - Arrival Date
+         - Departure Date
+         - Adult
+         - Rate
+         - Rate Plan
+         - Folio Balance
+         - Settlement Type
+         - Booking Agency
+     - Each Item Card should support drag & drop functionality to move reservations between rooms.
+     - Allow users to shorten or lengthen Item Cards to adjust reservation dates.
+     - Implement a locking feature: locked items should not be movable or resizable.
+ 
+3. Unassigned Guest List: This section is to be determined (TBA); further specifications will be provided later.
+
+4. Legend: This section is to be determined (TBA); further specifications will be provided later.
+
+5. Design Considerations:
+   - Ensure a clean user interface that promotes usability.
+   - Use visual cues to differentiate between different room types and reservation statuses.
+   - Include icons to represent different actions (e.g., drag-and-drop, locked status, etc.).

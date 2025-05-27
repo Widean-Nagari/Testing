@@ -5,7 +5,7 @@ This is a Streamlit-based admin dashboard for hotel reservation management.
 ## Project Structure
 
 - `src/` - Main source code
-  - `pages/` - Streamlit pages (Reservation List, Reservation Detail)
+  - `pages/` - Streamlit pages (Availability Summary)
   - `components/` - Reusable UI components
   - `api/` - API integration logic
   - `utils/` - Utility functions
@@ -22,7 +22,7 @@ This is a Streamlit-based admin dashboard for hotel reservation management.
    ```
 
 ## Features
-- Reservation list with filtering, sorting, pagination, and CRUD actions
-- Reservation detail page with dummy data, editable form, and delete functionality
+- Room Plans page with dummy data
+- Availability Summary page with dummy data.
 - Responsive, clean UI
 - Modular, maintainable code

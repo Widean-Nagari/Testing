@@ -1,0 +1,24 @@
+Create a dynamic availability summary page for a hotel booking system. The page should feature:
+1. Date Picker:
+   - At the top of the page, include a date picker that allows users to select a starting date. The summary and details sections will display data for the next 7 days from the selected date.
+2. Summary Section:
+   - Break down inventory by days of the week with metrics for:
+     - Inventory (Total rooms),
+     - Sold (Rooms booked),
+     - Available (Remaining rooms),
+     - Opportunity (Reserved but not booked).
+     - Minimum Sellable.
+3. Details Section:
+   - Breakdown by days of the week in a tabular format.
+4. Data Presentation:
+   - Tables in both summary and details sections should have data that contains:
+     - Room Types (only at details section, at summary section shows empty string)
+     - Date + Day. For each row in the tables and for every date column, display two additional columns:
+       - Availability Count (Number of rooms available),
+       - Availability Percentage (Calculated as Availability Count divided by Physical Inventory Availability, expressed as a percentage).
+5. Design Considerations:
+   - Design each table with alternating row colors for enhanced readability.
+   - Ensure each date column captures the information for the 7-day period starting from the selected date.
+   - Each room type should have its row, displaying the necessary metrics and expandable options.
+
+Include visual elements and ensure data accuracy to facilitate user understanding of booking availability over the specified dates.
