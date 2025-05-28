@@ -136,7 +136,10 @@ def main():
     for room_type in room_types:
         inventory_per_day = details_data[room_type]['max']
         detail_table += "<tr><td style='text-align: left; display: flex; justify-content: space-between;'>"
-        detail_table += f"<span>{room_type}</span>"
+        if room_type == 'DLXK - Deluxe King':
+            detail_table += f"<span><input type='checkbox' disabled> {room_type}</span>"
+        else:
+            detail_table += f"<span>{room_type}</span>"
         detail_table += f"<span style='color: purple; background-color: #ffffcc; width: 24px; font-weight: bold; text-align: center;'>{inventory_per_day}</span>"
         detail_table += "</td>"
         counts = details_data[room_type]['data']
